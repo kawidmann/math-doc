@@ -26,6 +26,10 @@
 
 }
 
+input.answer {
+	text-align: right;
+}
+
 .problemdiv {
 	display:inline-block;
 	text-align: right;

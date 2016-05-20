@@ -4,29 +4,34 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
+  <div>
     <%= f.label :name %>
     <%= f.text_field :name, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div>
     <%= f.label :email %>
     <%= f.email_field :email, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
+  <div>
     <%= f.label :password %>
     <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-    <% if @validatable %>
-      <span class="help-block"><%= @minimum_password_length %> characters minimum</span>
-    <% end %>
   </div>
 
-  <div class="form-group">
+  <div>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
 
+  </div>
+
+  <br>
+  <br>
+
   <%= f.submit "Sign up", class: 'btn btn-primary' %>
 <% end %>
+
+<br>
 
 <%= render "devise/shared/links" %>
