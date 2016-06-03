@@ -6,31 +6,24 @@
 <div class="form-group">
   <div>
     <%= f.label :name %>
-    <%= f.text_field :name%>
+    <%= f.text_field :name %>
   </div>
 
   <div>
-    <%= f.label :email %>
-    <%= f.email_field :email%>
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      
-    <% end %>
+    <%= f.label :addition %>
+    <%= f.select :addition, [['True', true], ['False', false]] %>
   </div>
 
   <div>
-    <%= f.label "New password" %>
-    <%= f.password_field :password, autocomplete: "off"%>
-   
+    
   </div>
 
   <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off"%>
+    
   </div>
 
   <div>
-    <%= f.label :current_password %>
-    <%= f.password_field :current_password, autocomplete: "off"%>
+    
     
   </div>
 </div>

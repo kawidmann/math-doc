@@ -1,27 +1,21 @@
 <h1>Problems</h1>
 
+<%= form_for(current_user, as: current_user, url: registration_path(current_user), html: { method: :put }) do |f| %>
+
 <div class="problemdiv">
-	<%= @new_problem[0] %><br>
 
-	<% if @new_problem[2] == :* %>
-		x
-	<% elsif @new_problem[2] == :/ %>
-		÷
-	<% else %>
-		<%= @new_problem[2] %>
-	<% end %>
-
-	<%= @new_problem[1] %>
-
-	<div id="equalbar"></div>
-
-	<%= @new_problem[0].send(@new_problem[2], @new_problem[1]) %>
-
-	<%= form_for(current_user, as: current_user, url: registration_path(current_user), html: { method: :put }) do |f| %>
-
-		<%= f.text_field :name,  autocomplete: "off", autofocus: "true", class: "answer" %>
+<% @new_problem.each do |x| %>
+	<%= @new_problem %>
+	<br>
+<% end %>
 
 
 	<% end %>
 
+	
 </div>
+
+
+<% end %>
+
+
